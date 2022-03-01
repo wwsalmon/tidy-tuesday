@@ -1,8 +1,10 @@
 import Link from "next/link";
+import {NextSeo} from "next-seo";
 
 export default function Home() {
     return (
         <div className="max-w-4xl mx-auto px-4 py-24">
+            <NextSeo title="Samson's Tidy Tuesdays"/>
             <div className="prose">
                 <h1>Samson's Tidy Tuesdays</h1>
                 <p>
