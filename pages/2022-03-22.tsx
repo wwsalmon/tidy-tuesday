@@ -125,7 +125,7 @@ export default function March22() {
     return (
         <>
             <NextSeo title="March 22: Baby names | Samson's Tidy Tuesdays"/>
-            <Header title="Baby names"/>
+            <Header title="Top 20 male and female names since 1880"/>
             <div className="flex items-center justify-center pb-32">
                 <svg ref={svgRef}/>
             </div>
