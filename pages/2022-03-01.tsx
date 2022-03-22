@@ -3,8 +3,8 @@ import us from "../data/2022-03-01/counties-10m.json";
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import {ReactNode, useEffect, useRef, useState} from "react";
-import Link from "next/link";
 import {NextSeo} from "next-seo";
+import Header from "../components/Header";
 
 const w = 800, h = 500;
 const projection = d3.geoAlbersUsa()
@@ -101,18 +101,15 @@ export default function AltFuels() {
     return (
         <>
             <NextSeo title="March 1: Alternative Fuels | Samson's Tidy Tuesdays"/>
-            <div className="text-center my-8">
-                <Link href="/"><a className="mb-4">Back home</a></Link>
-                <h1 className="text-2xl font-bold">What kind of fuel are you looking for?</h1>
-                <div className="flex items-center justify-center my-6">
-                    {fuelTypes.map(fuel => (
-                        <button
-                            key={fuel.value}
-                            className={`p-2 border mx-2 ${fuel.value === selectedFuel ? "bg-black text-white" : ""}`}
-                            onClick={() => setSelectedFuel(fuel.value)}
-                        >{fuel.label}</button>
-                    ))}
-                </div>
+            <Header title="What kind of fuel are you looking for?"/>
+            <div className="flex items-center justify-center my-8">
+                {fuelTypes.map(fuel => (
+                    <button
+                        key={fuel.value}
+                        className={`p-2 border mx-2 ${fuel.value === selectedFuel ? "bg-black text-white" : ""}`}
+                        onClick={() => setSelectedFuel(fuel.value)}
+                    >{fuel.label}</button>
+                ))}
             </div>
             <div className="flex items-center justify-center">
                 <svg ref={svgRef}/>

@@ -12,6 +12,7 @@ export default function Home() {
                 </p>
                 <ul>
                     <li><Link href="/2022-03-01"><a>2022-03-01: Alternative fuel stations</a></Link></li>
+                    <li><Link href="/2022-03-22"><a>2022-03-22: Baby names</a></Link></li>
                 </ul>
             </div>
         </div>
