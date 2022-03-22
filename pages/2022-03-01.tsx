@@ -44,7 +44,7 @@ export default function AltFuels() {
                 const svg = d3.select(svgRef.current);
                 svg.attr("width", w).attr("height", h).style("border", "1px solid black");
 
-                var path = d3.geoPath()
+                const path = d3.geoPath()
                     .projection(projection);
 
                 svg.append("path").attr("d", path(topojson.feature(us, us.objects.nation))).style("stroke", "black");
