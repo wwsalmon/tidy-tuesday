@@ -1,5 +1,5 @@
-import data from "../data/2022-03-01/locs-with-types.json";
-import us from "../data/2022-03-01/counties-10m.json";
+import data from "../python/2022-03-01/json/locs-with-types.json";
+import us from "../python/2022-03-01/json/counties-10m.json";
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import {ReactNode, useEffect, useRef, useState} from "react";
